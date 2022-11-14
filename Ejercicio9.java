@@ -10,7 +10,7 @@ public class Ejercicio9 {
         int cont=0;
 
         do{
-            n = (int)(Math.random()*50);
+            n = (int)(Math.random()*100);
             
             if(n%2==0){
                 System.out.print(n+" ");
