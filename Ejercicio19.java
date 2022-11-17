@@ -12,7 +12,7 @@ public class Ejercicio19 {
         int impar=0;
         int media=0;
 
-        for(int i=1; i<=150;i++){
+        for(int i=1; i<=50;i++){
 
             int numero = (int)((Math.random()*301)-100);
             System.out.print(numero+" ");
