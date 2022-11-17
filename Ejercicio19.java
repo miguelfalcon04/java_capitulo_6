@@ -12,9 +12,9 @@ public class Ejercicio19 {
         int impar=0;
         int media=0;
 
-        for(int i=1; i<=50;i++){
+        for(int i=1; i<=150;i++){
 
-            int numero = (int)((Math.random()*300)-100);
+            int numero = (int)((Math.random()*301)-100);
             System.out.print(numero+" ");
 
             media=media+numero;
@@ -30,7 +30,7 @@ public class Ejercicio19 {
 
         System.out.println("");
         System.out.println("El máximo de los pares es: "+par);
-        System.out.println("El mínimo de los pares es: "+impar);
+        System.out.println("El mínimo de los impares es: "+impar);
         System.out.println("La media de todos los números generados es: "+ (media/50));
     }
 }
