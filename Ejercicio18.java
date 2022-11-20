@@ -10,45 +10,60 @@ naranja.
 public class Ejercicio18 {
     public static void main(String[] args) {
 
-        int excepcion=0;
-        boolean fin= false;
-
-        do{
-        int color=(int)(Math.random()*6+1);
+        for(int j=1; j<=100;j++){
 
 
-        System.out.print("Para la habitación numero  utilice el color ");
-        if(color!=excepcion){
-            switch(color){
-            case 1:
-            System.out.print("rojo");
-            break;
+        int rojo=0;
+        int azul=0;
+        int verde=0;
+        int amarillo=0;
+        int violeta=0;
+        int naranja=0;
 
-            case 2:
-            System.out.print("azul");
-            break;
+        for(int i=1; i<=3;i++){
+            int colorhab=(int)(Math.random()*6+1);
+            System.out.print("Para la habitación numero "+i+" utilice el color ");
 
-            case 3:
-            System.out.print("verde");
-            break;
 
-            case 4:
-            System.out.print("amarillo");
-            break;
-
-            case 5:
-            System.out.print("violeta");
-            break;
-
-            case 6:
-            System.out.print("naranja");
-            break;
+            switch(colorhab){
+                case 1:
+                if(rojo==0){
+                    System.out.println("rojo");
+                    rojo=1;
+                    break;
+                }
+                case 2:
+                if(azul==0){
+                    System.out.println("azul");
+                    azul=1;
+                    break;
+                }
+                case 3:
+                if(verde==0){
+                    System.out.println("verde");
+                    verde=1;
+                    break;
+                }
+                case 4:
+                if(amarillo==0){
+                    System.out.println("amarillo");
+                    amarillo=1;
+                    break;
+                }
+                case 5:
+                if(violeta==0){
+                    System.out.println("violeta");
+                    violeta=1;
+                    break;
+                }
+                case 6:
+                if(naranja==0){
+                    System.out.println("naranja");
+                    naranja=1;
+                    break;
+                }
             }
-            System.out.println("");
-            excepcion=color;
-            }
-
-        }while(fin=false);
+        }
     }
 }
-
+}
