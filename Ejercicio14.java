@@ -7,35 +7,38 @@ te acaba de decir.
  */
 
 import java.util.Scanner;
-public class Ejercicio14 {
+public class Ejercicio14{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        int variable=101;
         int oportunidades=5;
+        int random= (int)(Math.random()*variable);
 
         do{
-            for(int i=1; i<=5; i++){
-                int numero= (int)(Math.random()*101);
-                System.out.println("El numero en el que piensa es el: "+numero);
-                System.out.println("¿Si o No?");
-                String opcion = sc.next();
+            System.out.println("Estas pensando en el: "+random);
+            System.out.print("si o no? ");
+            String opcion=sc.next();
+            if(opcion.equals("si")){
+                System.out.printf("El programa ha acertado el número en %d intentos",(5-oportunidades)+1);
+                oportunidades=0;
+            }else{
                 oportunidades=oportunidades-1;
-
-                if(opcion.equals("Si")){
-                    System.out.print("El ordenador ha acertado el número en "+(5-oportunidades)+" intentos");
-                    oportunidades=0;
-                    i=0;
-                }else{
-                    System.out.println("¿El número en el que piensa es mayor o menor?");
-                    String valor=sc.next();
-                    if(valor.equals("mayor")){
-
-                    }
+                System.out.print("Es mayor o menor? ");
+                String radio=sc.next();
+                if(radio.equals("menor")){
+                    variable=random;
+                    random=(int)(Math.random()*variable);
                 }
-
+                if(radio.equals("mayor")){
+                    variable=random;
+                    random=(int)(Math.random()*(101-variable)+variable);
+                }
             }
-        }while(oportunidades>1);
-        
+
+        }while(oportunidades>0);
+
         sc.close();
     }
 }
+
