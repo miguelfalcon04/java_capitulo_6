@@ -15,29 +15,18 @@ public class Ejercicio22 {
 
         System.out.print("Por favor, introduzca la longitud de la serpiente en caracteres contando la cabeza: ");
         int longitud = sc.nextInt();
+        int x=13;
 
-        System.out.println("            @");
-        for(int i=1; i<longitud;i++ ){
-            int posicion=(int)(Math.random()*3+1);
-            switch(posicion){
-                case 1: //Izquierda
-                System.out.print("           *");
-                break;
+        String cabeza= "@";
 
-                case 2: //Alineado
-                System.out.print("            *");
-                break;
-
-                case 3: //Derecha
-                System.out.print("             *");
-                break;
+        System.out.printf("%13s\n",cabeza);
+        for(int i=1; i<longitud-1;i++ ){
+            x+=(int)(Math.random()*3)-1;
+            for(int j=1; j<=x-1;j++){
+                System.out.print(" ");
             }
-            System.out.println();
+            System.out.print("#\n");
         }
-
-
-
-
         sc.close();
     }
 }
